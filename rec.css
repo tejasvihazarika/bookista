@@ -43,7 +43,9 @@ header nav ul li a:hover{
   border-radius: 6px;
   transition: 0.5s;
 }
-
+.logo a:visited {
+    color: #fff; 
+}
 
 .banner {
     background-image: url('topicwise/las.jpg');
