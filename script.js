@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll('section.book'); // Select all sections with class 'book'
+    const sections = document.querySelectorAll('section.book'); 
 
     sections.forEach(section => {
-        const container = section.querySelector('.book-container'); // Find the container within each section
-        const nxtBtn = section.querySelector('.nxt-btn'); // Find the next button within each section
-        const preBtn = section.querySelector('.pre-btn'); // Find the previous button within each section
+        const container = section.querySelector('.book-container'); 
+        const nxtBtn = section.querySelector('.nxt-btn'); 
+        const preBtn = section.querySelector('.pre-btn'); 
         
         let containerWidth = container.offsetWidth;
 
