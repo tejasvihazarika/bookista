@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:black;
+}
+header {
+  background-color:#292929;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #EEEEEE;
+  text-decoration: none;
+}
+header nav ul li a:hover{
+  color: #3c3b3e;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+
+.banner {
+    background-image: url('topicwise/las.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 100px 20px;
+    animation: change 20s infinite ease-in-out;
+
+}
+ 
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar{
+    width: 1000px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+::placeholder{
+    color: #cac7ff;
+}
+.search-bar button img{
+    width: 25px;
+}
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background:#ff5001 ;
+    cursor: pointer;
+}
+
+@media (max-width:1000px){
+    .search-bar{
+        width: 700px;
+        background: rgba(255,255,255,0.2);
+        display: flex;
+        align-items: center;
+        border-radius: 60px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width:700px){
+    .search-bar{
+        width: 400px;
+        background: rgba(255,255,255,0.2);
+        display: flex;
+        align-items: center;
+        border-radius: 60px;
+        padding: 10px 10px;
+    }
+}
+
+
+
+/* i think its right */
+
+.book {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .book-category {
+    padding: 0 10vw;
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight:bold;
+  }
+  
+  .book-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .book-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .book-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+  }
+  
+  .book-image {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .book-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background:#292929 ;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+  }
+  .book-card:hover .card-btn {
+    opacity: 1;
+  }
+  
+  .card-btn:hover {
+    background: #ff5001;
+    color: #fff;
+  }
+  
+  .book-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+  }
+  .book-description{
+    color: #EEEEEE;
+  }
+  .book-brand {
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  .pre-btn,
+  .nxt-btn {
+    border: none;
+    width: 60px;
+    height: 10%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    background-color: #cac7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 250px;
+    cursor: pointer;
+    z-index: 8;
+  }
+  
+  .pre-btn {
+    left: 10;
+  }
+  
+  .nxt-btn {
+    right: 10;
+  }
+
+  
+.footer {
+  background-color: #292929;
+  color: #fff;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding: 0;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer a:hover {
+  opacity: 0.7;
+}
