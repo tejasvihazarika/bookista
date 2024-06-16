@@ -1,16 +1,29 @@
-const productContainers = [...document.querySelectorAll('.book-container')];
-const nxtBtn=[...document.querySelectorAll('.nxt-btn')];
-const preBtn=[...document.querySelectorAll('.pre-btn')];
-productContainers.forEach((item, i) => {
-    let containerDimensions=item.getBoundingClientRect();
-    let containerWidth=containerDimensions.width;
-    nxtBtn[i].addEventListener('click', () => {
-        item.scrollLeft+=containerWidth;
-    })
-    preBtn[i].addEventListener('click', () => {
-        item.scrollLeft-=containerWidth;
-    })
-})
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('section.book'); // Select all sections with class 'book'
+
+    sections.forEach(section => {
+        const container = section.querySelector('.book-container'); // Find the container within each section
+        const nxtBtn = section.querySelector('.nxt-btn'); // Find the next button within each section
+        const preBtn = section.querySelector('.pre-btn'); // Find the previous button within each section
+        
+        let containerWidth = container.offsetWidth;
+
+        nxtBtn.addEventListener('click', () => {
+            container.scrollBy({
+                left: containerWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        preBtn.addEventListener('click', () => {
+            container.scrollBy({
+                left: -containerWidth,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
 
 function searchBooks(event) {
     event.preventDefault();
